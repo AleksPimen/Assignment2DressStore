@@ -1,4 +1,4 @@
-const Product = require('./api/product');
+const Product = require('./api/products');
 
 const getAllProducts = async (req, res) => {
   try {
