@@ -35,5 +35,5 @@ router.put('/api/products/:id', controller.updateProductById);
 router.delete('/api/products/:id', controller.deleteProductById);
 router.delete('/api/products', controller.deleteAllProducts);
 router.get('/api/products', controller.findProductsByName);
-
+app.use(router);
 module.exports = router;
