@@ -1,7 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const router = express.Router();
+const controller = require('./controller');
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
@@ -24,9 +27,6 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-const express = require('express');
-const router = express.Router();
-const controller = require('./controller');
 
 router.get('/api/products', controller.getAllProducts);
 router.get('/api/products/:id', controller.getProductById);
